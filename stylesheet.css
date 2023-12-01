@@ -1,9 +1,13 @@
 #parent{
     
     display: flex;
-    /*flex-direction: column;*/
+    flex-direction: column;
    
 
+}
+.buttonDiv{
+    display: flex;
+    flex-direction: column;
 }
 .boxDiv{
 
