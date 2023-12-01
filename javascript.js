@@ -9,6 +9,11 @@ function createDivs(){
             let div = document.createElement("div");
             div.classList.add("boxes");
             row.appendChild(div);
+            div.addEventListener('mouseover',()=>{
+                div.style.backgroundColor="red";
+                console.log("get here?");
+            })
+            
         
         }
     }
@@ -17,5 +22,3 @@ function createDivs(){
 window.addEventListener('load',()=>{
     createDivs();
 })
-
-
