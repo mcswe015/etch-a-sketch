@@ -1,20 +1,28 @@
 #parent{
     
     display: flex;
+    /*flex-direction: column;*/
+   
+
+}
+.boxDiv{
+
+    display: flex;
     height: 900px;
     width: 900px;
-
+    flex-direction: row;
+    
 }
 .row{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
 .boxes{
     border: solid 2px black;
     flex-grow:1;
-   
+    height:50px;
     width:50px;
     align-items: center;
     justify-content: space-evenly;
