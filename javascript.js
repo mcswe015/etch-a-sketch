@@ -19,12 +19,19 @@ let boxDiv=document.createElement("div");
 boxDiv.classList.add("boxdiv");
 parent.appendChild(boxDiv);
 
-buttonDiv.addEventListener('onclick',()=>{
-    if(inputted>100){
-        inputted=100;
+
+
+button.addEventListener('click',()=>{
+   
+   let inputContent = inputted.value;
+   console.log(inputContent);
+   if(inputContent>100){
+        inputContent=100;   
+        window.confirm("You can't go over 100. \n We maxed out your choice to 100.")
     }
-    createDivs(inputted);
-    inputted="";
+    removeDivs();
+    createDivs(inputContent);
+    inputContent="";
 })
 inputted.focus();
 
@@ -41,12 +48,22 @@ function createDivs(num){
             row.appendChild(div);
             div.addEventListener('mouseover',()=>{
                 div.style.backgroundColor="red";
-                console.log("get here?");
+               
             })
             
         
         }
     }
+}
+
+function removeDivs(){
+   
+   let removeRows = document.querySelectorAll(".row");
+   removeRows.forEach(element =>{
+    element.remove();
+    
+   })
+   
 }
 
 window.addEventListener('load',()=>{
