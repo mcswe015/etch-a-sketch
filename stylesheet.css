@@ -2,19 +2,31 @@
     
     display: flex;
     flex-direction: column;
+  
    
 
 }
 .buttonDiv{
     display: flex;
-    flex-direction: column;
+   flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 400px;
+
+
 }
 .boxDiv{
 
-    display: flex;
-    height: 900px;
-    width: 900px;
-    flex-direction: row;
+   display: flex;
+    
+    flex-direction: column;
+    align-content: start;
+   width: 900px;
+   height: 900px;
+    
+   
     
 }
 .row{
@@ -22,14 +34,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    flex-grow:1;
 }
 .boxes{
     border: solid 2px black;
     flex-grow:1;
-    height:50px;
-    width:50px;
+   /* height:50px;
+    width:50px;*/
     align-items: center;
     justify-content: space-evenly;
+    flex-grow:1;
+    height:100%;
    
     
 

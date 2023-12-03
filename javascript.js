@@ -1,6 +1,7 @@
 let parent = document.querySelector("#parent");
 
 let buttonDiv = document.createElement("div");
+buttonDiv.classList.add("buttonDiv");
 
 buttonDiv.textContent="How many rows do you want? Max 100";
 
@@ -16,7 +17,7 @@ buttonDiv.appendChild(button);
 parent.appendChild(buttonDiv);
 
 let boxDiv=document.createElement("div");
-boxDiv.classList.add("boxdiv");
+boxDiv.classList.add("boxDiv");
 parent.appendChild(boxDiv);
 
 
@@ -36,6 +37,14 @@ button.addEventListener('click',()=>{
 inputted.focus();
 
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 
 function createDivs(num){
     for(let j=1;j<=num;j++){
@@ -46,9 +55,10 @@ function createDivs(num){
             let div = document.createElement("div");
             div.classList.add("boxes");
             row.appendChild(div);
+            div.style.opacity=10;
             div.addEventListener('mouseover',()=>{
-                div.style.backgroundColor="red";
-               
+                div.style.backgroundColor=getRandomColor();
+               div.style.opacity+=(div.style.opacity)*0.1;
             })
             
         
